@@ -9,8 +9,14 @@ let personIdx = -1;
 init();
 
 function init() {
+	personIdx = getPersonIdx();
 	loadData();
 	fillInForm();
+}
+
+function getPersonIdx() {
+	const url = new URL(window.location.href);
+	return url.searchParams.get('personIdx') || -1;
 }
 
 function loadData() {
@@ -133,6 +139,10 @@ function saveButtonClick(e) {
 		data[personIdx] = makePerson();
 	}
 	localStorage.setItem(STORAGE_NAME, JSON.stringify(data));
+	if (personIdx !== -1) {
+		window.location.href = '../index.html';
+		return;
+	}
 	personIdx = -1;
 	clearForm();
 }
