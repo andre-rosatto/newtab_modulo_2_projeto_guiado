@@ -50,10 +50,19 @@ table {
 
 table td {
 	padding: 5px;
+	vertical-align: top;
 }
 
 table td:first-child {
 	width: 50%;
+}
+
+table td:nth-child(2) {
+	min-width: 135px;
+}
+
+table td:last-child {
+	min-width: 120px;
 }
 
 table thead {
@@ -115,21 +124,56 @@ form button {
 	margin-top: 10px;
 }
 
-/* form .form-item {
-	padding: 3px;
+/* media queries */
+@media screen and (max-width: 460px) {
+	header {
+		height: 70px;
+		width: 100%;
+	}
+
+	/* table */
+	table {
+		max-width: 100%;
+	}
+
+	table td:first-child {
+		max-width: 25%;
+	}
+
+	table td:nth-child(2) {
+		min-width: initial;
+	}
+
+	table td:last-child {
+		min-width: initial;
+	}
 }
 
-form .form-item label {
-	display: inline-block;
-	text-align: right;
-	width: 150px;
-}
+@media screen and (max-width: 370px) {
 
-form .form-item__radio_item {
-	display: flex;
-	flex-direction: column;
-}
+	/* form */
+	form .form-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
 
-form .form-item__radio_item label {
-	display: initial;
-} */
+	form label {
+		text-align: left;
+		margin-top: 10px;
+	}
+
+	form .xp-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	form .xp-wrapper input[type=radio] {
+		margin-left: 10px;
+		margin-bottom: 2px;
+	}
+
+	form .xp-wrapper label:last-child {
+		margin-right: 15px;
+	}
+}
