@@ -11,7 +11,7 @@ init();
 function init() {
 	personIdx = getPersonIdx();
 	loadData();
-	if (personIdx > data.length) {
+	if (personIdx >= data.length) {
 		personIdx = -1;
 	}
 	fillInForm();
