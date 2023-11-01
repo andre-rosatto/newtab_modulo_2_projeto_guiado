@@ -19,11 +19,11 @@ function init() {
 
 function getPersonIdx() {
 	const url = new URL(window.location.href);
-	return url.searchParams.get('personIdx') || -1;
+	return url.searchParams.get('personIdx') ?? -1;
 }
 
 function loadData() {
-	data = JSON.parse(localStorage.getItem(STORAGE_NAME)) || [];
+	data = JSON.parse(localStorage.getItem(STORAGE_NAME)) ?? [];
 	console.log(data);
 }
 
@@ -58,7 +58,7 @@ function onNameBlur(e) {
 }
 
 function getRawPhone() {
-	let result = document.querySelector('#phone').value.match(/[0-9]+/g) || [];
+	let result = document.querySelector('#phone').value.match(/[0-9]+/g) ?? [];
 	result = result.join('');
 	result = result.substring(0, Math.min(result.length, 11));
 	return result;
