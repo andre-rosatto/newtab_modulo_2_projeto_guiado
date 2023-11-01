@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Newtab: Módulo 2 - Projeto Guiado</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+	<header>
+		<img src="../assets/img/logo-newtab.png">
+	</header>
+	<nav>
+		<ul>
+			<li><a href="../index.html">Listagem</a></li>
+			<li><a href="javascript:void(0);">Cadastrar</a></li>
+		</ul>
+	</nav>
+	<main>
+		<form onsubmit="return false;">
+			<div class="form-wrapper">
+				<label for="name">Nome:</label>
+				<input type="text" name="name" id="name" placeholder="Nome" required oninput="onNameChange(event);"
+					onblur="onNameBlur(event);" onfocus="this.select();">
+				<label for="phone">Telefone:</label>
+				<input type="text" name="phone" id="phone" placeholder="Número do telefone" required
+					oninput="onPhoneChange(event);" onblur="onPhoneBlur(event);" onfocus="this.select();">
+				<label>Experiência prévia:</label>
+				<div class="xp-wrapper">
+					<div class="xp-wrapper__xp-item">
+						<input type="radio" name="xp" id="xp-yes">
+						<label for="xp-yes">Sim</label>
+					</div>
+					<div class="xp-wrapper__xp-item">
+						<input type="radio" name="xp" id="xp-no" checked>
+						<label for="xp-no">Não</label>
+					</div>
+				</div>
+			</div>
+			<button onclick="saveButtonClick(event)">Salvar</button>
+		</form>
+	</main>
+	<script src="../assets/js/form.js"></script>
+</body>
+
+</html>

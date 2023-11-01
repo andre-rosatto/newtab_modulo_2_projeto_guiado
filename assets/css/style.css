@@ -13,7 +13,7 @@ header {
 }
 
 header img {
-	height: 80%;
+	height: 70%;
 	margin-left: 20px;
 }
 
@@ -36,6 +36,13 @@ nav a {
 	text-decoration: none;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* index.html */
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -71,3 +78,58 @@ table tbody td.xp.no {
 table td button {
 	padding: 3px;
 }
+
+/* form.html */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form .form-wrapper {
+	display: grid;
+	grid-template-columns: 150px 200px;
+	gap: 10px 5px;
+}
+
+form label {
+	text-align: right;
+	padding: 2px 0;
+}
+
+form input[type=text] {
+	padding: 2px;
+}
+
+form .xp-wrapper {
+	padding-top: 2px;
+}
+
+form .xp-wrapper input[type=radio] {
+	margin-bottom: 10px;
+}
+
+form button {
+	padding: 5px;
+	width: 100px;
+	margin-top: 10px;
+}
+
+/* form .form-item {
+	padding: 3px;
+}
+
+form .form-item label {
+	display: inline-block;
+	text-align: right;
+	width: 150px;
+}
+
+form .form-item__radio_item {
+	display: flex;
+	flex-direction: column;
+}
+
+form .form-item__radio_item label {
+	display: initial;
+} */
